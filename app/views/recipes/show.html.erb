@@ -1,0 +1,18 @@
+<h1> <%= @recipe.name %></h1>
+<h3>Created By:
+<% if @recipe.user.name.valid? %>
+  <%= @recipe.user.name %>
+<% else %>None:</h3>
+<% end %>
+<p>Here is a list of ingredients for this recipe:</p>
+<ul>
+  <% @recipe.ingredients.each do |i| %>
+    <li>
+      <%= link_to i.name, ingredient_path(i) %>
+    </li>
+  <% end %>
+</ul>
+<br>
+<%= link_to "Edit", edit_recipe_path %>
+<br><br>
+<%= link_to "Return to Menu", recipes_path %>

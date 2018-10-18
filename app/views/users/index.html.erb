@@ -1,0 +1,12 @@
+<h1>Users List:</h1>
+<ul>
+  <% @users.each do |u| %>
+  <li>
+    <p><%= link_to u.name, user_path(u) %></p>
+  </li>
+  <% end %>
+</ul>
+<br>
+<%= link_to "Add a User", new_user_path %>
+<br><br>
+<%= link_to "Recipes", recipes_path %>

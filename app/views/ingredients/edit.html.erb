@@ -1,0 +1,6 @@
+<%= render "form" %>
+<br><br>
+<%= link_to "Delete", ingredient_path(@ingredient), method: :delete, data: {confirm: "Are you sure?"} %>
+
+<br><br>
+<%= link_to "Return to Menu", ingredients_path %>
